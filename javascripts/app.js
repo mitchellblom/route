@@ -1,0 +1,1 @@
+var app = angular.module("RouteApp", ["ngRoute"]); // make new prototype from angular.min.js profile. array is for plugins
