@@ -10,10 +10,10 @@ app.factory("HwyFactory", function($http, $q, FIREBASE_CONFIG) {
             if(hwyCollection.length !== null) {
             Object.keys(hwyCollection).forEach((key) => {
                 hwyCollection[key].id = key;
-                itemz.push(hwyCollection[key]);
+                hwys.push(hwyCollection[key]);
             });
           }
-            resolve(itemz);
+            resolve(hwys);
         })
         .catch((error) => {
             reject(error);
@@ -23,7 +23,7 @@ app.factory("HwyFactory", function($http, $q, FIREBASE_CONFIG) {
 
   let getSingleHwy = (id) => {
     return $q((resolve, reject) => {
-       $http.get(`${FIREBASE_CONFIG.databaseURL}/items/item1.json`)    // ${id}
+       $http.get(`${FIREBASE_CONFIG.databaseURL}/items/item0.json`)    // ${id}
         .then((results) => {
           results.data.id = id;
           resolve(results);

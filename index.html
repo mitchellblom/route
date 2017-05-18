@@ -7,9 +7,11 @@
 </head>
 <body ng-app="RouteApp">
 
+
 	<div ng-include="'partials/navbar.html'"></div>		<!-- double AND single quotes for ng-include! -->
 	<div class="row">
 		<h1>Route Routing</h1>
+		<div ng-include="'partials/hwy-list.html'"></div>
 		<div class="col-xs-8 col-xs-offset-2" ng-view> <!-- ng view puts routes on this stated div -->		
 		</div>
 	</div>
@@ -30,6 +32,7 @@
 <script type="text/javascript" src="./javascripts/factories/HwyFactory.js"></script>
 
 <!-- controllers -->
+<script type="text/javascript" src="./javascripts/controllers/HwyListCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/AkCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/PanamCtrl.js"></script>
 <script type="text/javascript" src="./javascripts/controllers/NavCtrl.js"></script>

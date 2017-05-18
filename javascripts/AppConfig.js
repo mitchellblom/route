@@ -4,6 +4,10 @@ app.run(function(FIREBASE_CONFIG) {
 
 app.config(function($routeProvider){
     $routeProvider
+        .when('/hwy/list', {
+            templateUrl: 'partials/hwy-list.html',
+            controller: 'HwyListCtrl'
+        })
         .when('/hwy/ak', {
             templateUrl: 'partials/ak.html',
             controller: 'AkCtrl'
@@ -12,5 +16,5 @@ app.config(function($routeProvider){
             templateUrl: 'partials/panam.html',
             controller: 'PanamCtrl'
         })
-        .otherwise('hwy/ak');
+        .otherwise('hwy/list');
 });
