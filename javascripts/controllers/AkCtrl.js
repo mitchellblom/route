@@ -1,13 +1,11 @@
 app.controller("AkCtrl", function($routeParams, $scope, HwyFactory){
-    // $scope.hwyName = {};
-    // $scope.hwyDescrip = {};
-    $scope.selectedHwy = {};
+    $scope.hwyName = {};
+    $scope.hwyDescrip = {};
 
     HwyFactory.getSingleHwy($routeParams.id).then((results) => {
-        console.log(results);
-        $scope.selectedHwy = results.data;
-    	// $scope.hwyName = results.data;     // dot name ?
-        // $scope.hwyDescrip = results.data;     // dot descrip ?
+        console.log(results.data);
+    	$scope.hwyName = results.data.highway;     // dot name ?
+        $scope.hwyDescrip = results.data.description;     // dot descrip ?
     }).catch((error) => {
     	console.log(error);
     });
