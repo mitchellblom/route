@@ -8,7 +8,7 @@ app.config(function($routeProvider){
             templateUrl: 'partials/ak.html',
             controller: 'AkCtrl'           // not a route
         })
-        .when('/hwy/panam', {
+        .when('/hwy/:id', {                              // added :id for now to see if works instead of panam
             templateUrl: 'partials/panam.html',
             controller: 'PanamCtrl'
         })

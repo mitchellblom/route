@@ -1,6 +1,27 @@
-app.factory("ItemFactory", function($http, $q, FIREBASE_CONFIG) {
+app.factory("HwyFactory", function($http, $q, FIREBASE_CONFIG) {
 
-  let getSingleItem = (id) => {
+    let getHwyList = () => {
+    let hwys = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/items.json`)
+        .then((fbItems) => {
+            var hwyCollection = fbItems.data;
+            console.log(hwyCollection);
+            if(hwyCollection.length !== null) {
+            Object.keys(hwyCollection).forEach((key) => {
+                hwyCollection[key].id = key;
+                itemz.push(hwyCollection[key]);
+            });
+          }
+            resolve(itemz);
+        })
+        .catch((error) => {
+            reject(error);
+        });
+    });
+  };
+
+  let getSingleHwy = (id) => {
     return $q((resolve, reject) => {
        $http.get(`${FIREBASE_CONFIG.databaseURL}/items/${id}.json`)
         .then((results) => {
@@ -12,10 +33,9 @@ app.factory("ItemFactory", function($http, $q, FIREBASE_CONFIG) {
     });
   };
 
-  getSingleItem();
-
   return {
-      getSingleItem:getSingleItem
+      getHwyList:getHwyList,
+      getSingleHwy:getSingleHwy
   };
 
 });
