@@ -23,7 +23,7 @@ app.factory("HwyFactory", function($http, $q, FIREBASE_CONFIG) {
 
   let getSingleHwy = (id) => {
     return $q((resolve, reject) => {
-       $http.get(`${FIREBASE_CONFIG.databaseURL}/items/item0.json`)    // ${id}
+       $http.get(`${FIREBASE_CONFIG.databaseURL}/items/${id}.json`)    // ${id}
         .then((results) => {
           results.data.id = id;
           resolve(results);

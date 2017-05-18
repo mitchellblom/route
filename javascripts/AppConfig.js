@@ -8,11 +8,11 @@ app.config(function($routeProvider){
             templateUrl: 'partials/hwy-list.html',
             controller: 'HwyListCtrl'
         })
-        .when('/hwy/ak', {
+        .when('/hwy/:id', {
             templateUrl: 'partials/ak.html',
             controller: 'AkCtrl'
         })
-        .when('/hwy/panam', {                                // :id ?????
+        .when('/hwy/:id', {                                // :id ?????
             templateUrl: 'partials/panam.html',
             controller: 'PanamCtrl'
         })
