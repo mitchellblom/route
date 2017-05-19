@@ -4,8 +4,8 @@ app.controller("AkCtrl", function($routeParams, $scope, HwyFactory){
 
     HwyFactory.getSingleHwy($routeParams.id).then((results) => {
         console.log(results.data);
-    	$scope.hwyName = results.data.highway;     // dot name ?
-        $scope.hwyDescrip = results.data.description;     // dot descrip ?
+    	$scope.hwyName = results.data.highway;
+        $scope.hwyDescrip = results.data.description;
     }).catch((error) => {
     	console.log(error);
     });

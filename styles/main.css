@@ -1,3 +1,12 @@
 body {
   text-align: center;
   background: url("https://i.ytimg.com/vi/_KbMD3KU9ms/maxresdefault.jpg"); }
+
+h2 {
+  font-family: "arial black", arial, sans-serif; }
+
+p {
+  font-family: arial; }
+
+.navbar-header a {
+  font-family: "arial black", arial, sans-serif; }
