@@ -1,6 +1,7 @@
 # NSS Route Routing Exercise
 
-![Splashpage]()
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/route/routing/styles/route1.png)
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/route/routing/styles/route2.png)
 
 <hr>
 
