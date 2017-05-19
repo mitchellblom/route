@@ -2,11 +2,12 @@ body {
   text-align: center;
   background: url("https://i.ytimg.com/vi/_KbMD3KU9ms/maxresdefault.jpg"); }
 
+h1 {
+  font-family: "arial black", arial, sans-serif;
+  font-size: 2em; }
+
 h2 {
   font-family: "arial black", arial, sans-serif; }
 
 p {
-  font-family: arial; }
-
-.navbar-header a {
-  font-family: "arial black", arial, sans-serif; }
+  font-family: arial, sans-serif; }
