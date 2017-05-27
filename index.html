@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Route Routing</title>
+	<title>Famous American Highways</title>
 	<link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body ng-app="RouteApp">
 
 
-
+	<div ng-include="'partials/navbar.html'"></div>		<!-- double AND single quotes for ng-include! -->
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2" ng-view> <!-- ng view puts routes on this stated div -->		
+		</div>
+	</div>
 
 <!-- third party -->
-<!-- <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 <script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
-<!-- <script type="text/javascript" src="./lib/bower_components/angular-route/angular-route.min.js"></script> -->
+<script type="text/javascript" src="./lib/bower_components/angular-route/angular-route.min.js"></script>
 
 <!-- config -->
 <script type="text/javascript" src="./javascripts/app.js"></script>
-<!-- <script type="text/javascript" src="./javascripts/AppConfig.js"></script> -->
-<!-- <script type="text/javascript" src="./javascripts/AppConstants.js"></script> -->
+<script type="text/javascript" src="./javascripts/AppConfig.js"></script>
+<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
+
+<!-- factory scripts -->
+<script type="text/javascript" src="./javascripts/factories/HwyFactory.js"></script>
+
+<!-- controllers -->
+<script type="text/javascript" src="./javascripts/controllers/HwyListCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/AkCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/PanamCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/NavCtrl.js"></script>
 
 </body>
 </html>

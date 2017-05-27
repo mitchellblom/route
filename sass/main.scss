@@ -1,3 +1,19 @@
+@import "fonts";
+
 body {
-	background-color: lightblue;
+	text-align: center;
+	background: url('https://i.ytimg.com/vi/_KbMD3KU9ms/maxresdefault.jpg');
+}
+
+h1 {
+	font-family: $header-fonts;
+	font-size: 2em;
+}
+
+h2 {
+	font-family: $header-fonts;
+}
+
+p {
+	font-family: $p-fonts;
 }
